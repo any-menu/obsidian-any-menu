@@ -1,13 +1,9 @@
 {
+  "extends": "../../tsconfig.base.json",
+
   "compilerOptions": {
-    "types": ["node"],
-    "experimentalDecorators": true,
     "baseUrl": ".",
-    "paths": {
-      "@/Core/*": ["./node_modules/@any-menu/any-menu-core/*"],
-      "@/*": ["../../src/*"]
-    },
-    "module": "ESNext",
+    "experimentalDecorators": true,
     "target": "ES6",
     "allowJs": true,
     "noImplicitAny": true,
@@ -29,8 +25,5 @@
                       // 或在for of时报错：类型“HTMLCollection”必须具有返回迭代器的 "[Symbol.iterator]()" 方法
     ],
   },
-  "include": [
-    "**/*.ts"
-  ],
-  "exclude": ["../Tauri/", "../App/"]
+  "exclude": ["../Tauri/", "../Browser/"]
 }
